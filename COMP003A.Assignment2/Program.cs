@@ -7,7 +7,10 @@
             string userFirstName;
             string userLastName;
             int userAge;
-            int itemPrice;
+            int futureAge;
+            double itemPrice;
+            double itemDiscountStudent;
+            double itemDiscountSenior;
             bool student;
 
             Console.Write(
@@ -22,23 +25,28 @@
 
             Console.Write("How old are you?: ");
             userAge = int.Parse(Console.ReadLine());
+            futureAge = userAge + 5;
 
             Console.Write("What is the price of the item you're interested in?: ");
-            itemPrice = int.Parse(Console.ReadLine());
+            itemPrice = double.Parse(Console.ReadLine());
+            itemDiscountStudent = itemPrice * .9;
+            itemDiscountSenior = itemPrice * .8;
 
             Console.Write("Are you a student? (true/false): ");
             student = bool.Parse(Console.ReadLine());
 
+            // Output Section
             Console.Write(
-            "\n\n\n" +
-            "******************************************\n" +
-            $"Hello {userFirstName} {userLastName}\n" +
-            $""+
-            $"" +
-            $"" +
-            $"" +
-            $"");
-
+                "\n\n\n" +
+                "******************************************\n" +
+                $"Hello, {userFirstName} {userLastName}!\n" +
+                $"Your current age is {userAge}.\n" +
+                $"In 5 years, you will be {futureAge}.\n" +
+                $"The original price of the item is ${itemPrice}.\n" +
+                $"As a student, your discounted price is ${itemDiscountStudent}.\n" +
+                $"As a senior, your discounted price is ${itemDiscountSenior}.\n" +
+                "******************************************\n");
         }
+
     }
-}
+    }

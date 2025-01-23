@@ -1,4 +1,11 @@
-﻿namespace COMP003A.Assignment2
+﻿/*
+*Author: [Zaid Rojas]
+*Course: [COMP-003A-L01]
+*Faculty: Jonathan Cruz
+*Purpose: Users will input their information, and the program will calculate potential discounts based on their profile.
+*/
+
+namespace COMP003A.Assignment2
 {
     internal class Program
     {
